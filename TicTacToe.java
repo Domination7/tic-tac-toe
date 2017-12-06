@@ -1,5 +1,7 @@
 public class TicTacToe{
 	static String[][][] displayBoard;
+	static String[][] bigBoard;
+	String winner = "";
 	boolean playerOneTurn = true;
 	
 	public static void main(String[] args){
@@ -94,6 +96,16 @@ public class TicTacToe{
 	
 	public static void divider(){
 		System.out.println("===========================================================================");
+	}
+	
+	//Have to fix this up.... This is nasty
+	public static void checkForBigThree(String player){
+		if(bigBoard[0][0] == player && bigBoard[0][1] == player && bigBoard[0][2] == player)
+			winner = player;
+		if(bigBoard[1][0] == player && bigBoard[1][1] == player && bigBoard[1][2] == player)
+			winner = player;
+		if(bigBoard[2][0] == player && bigBoard[2][1] == player && bigBoard[2][2] == player)
+			winner = player;
 	}
 	
 	
